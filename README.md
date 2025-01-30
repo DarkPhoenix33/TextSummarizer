@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TextSummarizer USing Huggingface
 
 ### Workflows 
@@ -9,3 +10,7 @@
 5. Update the components- Data Ingestion,Data Transformation, Model Trainer
 6. Create our Pipeline-- Training Pipeline,PRediction Pipeline
 7. Front end-- Api's, Training APi's, Batch Prtediction API's
+=======
+# TextSummarizer
+Project is in progress
+>>>>>>> 8bd908ac789677d1f4c2934b5539d012d19b97b6
