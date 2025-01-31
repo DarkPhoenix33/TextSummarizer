@@ -5,3 +5,154 @@
 [2025-01-30 14:15:09,608: INFO: common: Created directory at: artifacts/data_ingestion]
 [2025-01-30 14:15:10,889: INFO: data_ingestion: File has been downloaded]
 [2025-01-30 14:15:11,123: INFO: main: Stage Data Ingestion stage Completed]
+[2025-01-31 12:09:10,029: INFO: config: PyTorch version 2.5.1 available.]
+[2025-01-31 12:09:11,243: INFO: main: stage Data Ingestion stage initiated]
+[2025-01-31 12:09:11,252: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 12:09:11,263: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 12:09:11,264: INFO: common: Created directory at: artifacts]
+[2025-01-31 12:09:11,264: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-01-31 12:09:13,942: INFO: data_ingestion: File has been downloaded]
+[2025-01-31 12:09:14,076: INFO: main: Stage Data Ingestion stage Completed]
+[2025-01-31 12:09:14,076: INFO: main: stage Data Transforamtion stage initiated]
+[2025-01-31 12:09:14,077: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 12:09:14,078: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 12:09:14,079: INFO: common: Created directory at: artifacts]
+[2025-01-31 12:09:14,079: ERROR: main: "'ConfigBox' object has no attribute 'data_transformation'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'data_transformation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_transformation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'data_transformation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'data_transformation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\main.py", line 21, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\pipeline\stage_2_data_transforamtion_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation_config=config.get_data_transformation_config()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\config\configuration.py", line 29, in get_data_transformation_config
+    config=self.config.data_transformation
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_transformation'"
+[2025-01-31 12:14:02,846: INFO: config: PyTorch version 2.5.1 available.]
+[2025-01-31 12:14:03,139: INFO: main: stage Data Ingestion stage initiated]
+[2025-01-31 12:14:03,153: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 12:14:03,155: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 12:14:03,157: INFO: common: Created directory at: artifacts]
+[2025-01-31 12:14:03,158: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-01-31 12:14:03,158: INFO: data_ingestion: File already exists]
+[2025-01-31 12:14:03,281: INFO: main: Stage Data Ingestion stage Completed]
+[2025-01-31 12:14:03,281: INFO: main: stage Data Transforamtion stage initiated]
+[2025-01-31 12:14:03,283: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 12:14:03,284: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 12:14:03,284: INFO: common: Created directory at: artifacts]
+[2025-01-31 12:14:03,285: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-01-31 12:14:03,285: ERROR: main: "'ConfigBox' object has no attribute 'root_path'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'root_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'root_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'root_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'root_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'root_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'root_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\main.py", line 21, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\pipeline\stage_2_data_transforamtion_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation_config=config.get_data_transformation_config()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\config\configuration.py", line 35, in get_data_transformation_config
+    root_path=config.root_path,
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root_path'"
+[2025-01-31 12:14:48,694: INFO: config: PyTorch version 2.5.1 available.]
+[2025-01-31 12:14:49,002: INFO: main: stage Data Ingestion stage initiated]
+[2025-01-31 12:14:49,004: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 12:14:49,005: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 12:14:49,006: INFO: common: Created directory at: artifacts]
+[2025-01-31 12:14:49,006: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-01-31 12:14:49,007: INFO: data_ingestion: File already exists]
+[2025-01-31 12:14:49,136: INFO: main: Stage Data Ingestion stage Completed]
+[2025-01-31 12:14:49,137: INFO: main: stage Data Transforamtion stage initiated]
+[2025-01-31 12:14:49,139: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 12:14:49,140: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 12:14:49,140: INFO: common: Created directory at: artifacts]
+[2025-01-31 12:14:49,141: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-01-31 12:15:00,190: INFO: main: Stage Data Transforamtion stage Completed]
