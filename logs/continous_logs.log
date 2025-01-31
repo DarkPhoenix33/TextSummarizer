@@ -156,3 +156,382 @@ box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root_path'"
 [2025-01-31 12:14:49,140: INFO: common: Created directory at: artifacts]
 [2025-01-31 12:14:49,141: INFO: common: Created directory at: artifacts/data_transformation]
 [2025-01-31 12:15:00,190: INFO: main: Stage Data Transforamtion stage Completed]
+[2025-01-31 14:47:54,582: INFO: config: PyTorch version 2.5.1 available.]
+[2025-01-31 14:47:58,414: INFO: main: stage Data Ingestion stage initiated]
+[2025-01-31 14:47:58,450: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:47:58,470: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:47:58,483: ERROR: main: "'ConfigBox' object has no attribute 'artifact_root'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'artifact_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'artifact_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'artifact_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifact_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'artifact_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'artifact_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'artifact_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\main.py", line 11, in <module>
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\pipeline\stage_1_data_ingestion_pipeline.py", line 11, in initiate_data_ingestion
+    config=ConfigurationManager()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\config\configuration.py", line 13, in __init__
+    create_directories([self.config.artifact_root])
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifact_root'"
+[2025-01-31 14:49:02,354: INFO: config: PyTorch version 2.5.1 available.]
+[2025-01-31 14:49:03,254: INFO: main: stage Data Ingestion stage initiated]
+[2025-01-31 14:49:03,286: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:49:03,291: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:49:03,293: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:49:03,294: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-01-31 14:49:03,295: INFO: data_ingestion: File already exists]
+[2025-01-31 14:49:03,557: INFO: main: Stage Data Ingestion stage Completed]
+[2025-01-31 14:49:03,557: INFO: main: stage Data Transforamtion stage initiated]
+[2025-01-31 14:49:03,563: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:49:03,566: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:49:03,566: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:49:03,567: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-01-31 14:49:07,741: INFO: main: Stage Data Transforamtion stage Completed]
+[2025-01-31 14:49:07,742: INFO: main: stage Data Trainer stage initiated]
+[2025-01-31 14:49:07,749: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:49:07,753: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:49:07,755: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:49:07,756: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-31 14:49:07,757: ERROR: main: ModelTrainerConfig() takes no arguments]
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\config\configuration.py", line 47, in get_model_trainer_config
+    model_trainer_config=ModelTrainerConfig(
+TypeError: ModelTrainerConfig() takes no arguments
+[2025-01-31 14:53:07,831: INFO: config: PyTorch version 2.5.1 available.]
+[2025-01-31 14:53:08,790: INFO: main: stage Data Ingestion stage initiated]
+[2025-01-31 14:53:08,800: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:53:08,804: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:53:08,805: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:53:08,806: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-01-31 14:53:08,807: INFO: data_ingestion: File already exists]
+[2025-01-31 14:53:09,084: INFO: main: Stage Data Ingestion stage Completed]
+[2025-01-31 14:53:09,086: INFO: main: stage Data Transforamtion stage initiated]
+[2025-01-31 14:53:09,096: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:53:09,101: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:53:09,102: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:53:09,103: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-01-31 14:53:14,648: INFO: main: Stage Data Transforamtion stage Completed]
+[2025-01-31 14:53:14,650: INFO: main: stage Data Trainer stage initiated]
+[2025-01-31 14:53:14,661: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:53:14,667: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:53:14,668: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:53:14,670: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-31 14:53:19,258: ERROR: main: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1738320798&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczODMyMDc5OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=YjlslJHdvb56TMulka6FlVQiLH9QKOWa5~uHdN1-CcklQL8O6bndAQ4NTCjdvizja9Ez7h94s0s9HtdGg1Ol76lm0B5WO~ymyeSy0-1B~ieIjQeeLpp5RM4cgIxM2FlPFk3wDG9PNUQx9FH1CU2b7fNGcXLA1~Y8F7uQCGkxL1XpLa4NhTVpWqO5dhgCaggY51HTmM8gZl1CLvrUir2UyI1Jy2j0NfQH1m7vIJz3csaf4fWoJe7~Qkqvi3rJFMyUYouJ6ywk-EujKW~tFskcH-q~E-ZrKWueL6Jw48yVu2w-IYFVuecZ7uF~1rvUmEsGQ0pWjF8PEpBilanr7rhhxQ__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)')))"), '(Request ID: 50a792fc-9599-41b9-997c-722b16859ad2)')]
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\util\ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\util\ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\ssl.py", line 512, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\ssl.py", line 1070, in _create
+    self.do_handshake()
+  File "C:\D\MLOps\TextSummarizer\venv\lib\ssl.py", line 1341, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1738320798&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczODMyMDc5OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=YjlslJHdvb56TMulka6FlVQiLH9QKOWa5~uHdN1-CcklQL8O6bndAQ4NTCjdvizja9Ez7h94s0s9HtdGg1Ol76lm0B5WO~ymyeSy0-1B~ieIjQeeLpp5RM4cgIxM2FlPFk3wDG9PNUQx9FH1CU2b7fNGcXLA1~Y8F7uQCGkxL1XpLa4NhTVpWqO5dhgCaggY51HTmM8gZl1CLvrUir2UyI1Jy2j0NfQH1m7vIJz3csaf4fWoJe7~Qkqvi3rJFMyUYouJ6ywk-EujKW~tFskcH-q~E-ZrKWueL6Jw48yVu2w-IYFVuecZ7uF~1rvUmEsGQ0pWjF8PEpBilanr7rhhxQ__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 16, in train
+    model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(self.config.model_ckpt).to(device)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\transformers\modeling_utils.py", line 3805, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\transformers\utils\hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 860, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 1009, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 1543, in _download_to_tmp_and_move
+    http_get(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 369, in http_get
+    r = _request_wrapper(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 301, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1738320798&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczODMyMDc5OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=YjlslJHdvb56TMulka6FlVQiLH9QKOWa5~uHdN1-CcklQL8O6bndAQ4NTCjdvizja9Ez7h94s0s9HtdGg1Ol76lm0B5WO~ymyeSy0-1B~ieIjQeeLpp5RM4cgIxM2FlPFk3wDG9PNUQx9FH1CU2b7fNGcXLA1~Y8F7uQCGkxL1XpLa4NhTVpWqO5dhgCaggY51HTmM8gZl1CLvrUir2UyI1Jy2j0NfQH1m7vIJz3csaf4fWoJe7~Qkqvi3rJFMyUYouJ6ywk-EujKW~tFskcH-q~E-ZrKWueL6Jw48yVu2w-IYFVuecZ7uF~1rvUmEsGQ0pWjF8PEpBilanr7rhhxQ__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)')))"), '(Request ID: 50a792fc-9599-41b9-997c-722b16859ad2)')
+[2025-01-31 14:55:00,334: INFO: config: PyTorch version 2.5.1 available.]
+[2025-01-31 14:55:01,206: INFO: main: stage Data Ingestion stage initiated]
+[2025-01-31 14:55:01,212: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:55:01,216: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:55:01,217: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:55:01,219: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-01-31 14:55:01,220: INFO: data_ingestion: File already exists]
+[2025-01-31 14:55:01,435: INFO: main: Stage Data Ingestion stage Completed]
+[2025-01-31 14:55:01,436: INFO: main: stage Data Transforamtion stage initiated]
+[2025-01-31 14:55:01,445: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:55:01,450: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:55:01,452: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:55:01,454: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-01-31 14:55:04,770: INFO: main: Stage Data Transforamtion stage Completed]
+[2025-01-31 14:55:04,771: INFO: main: stage Data Trainer stage initiated]
+[2025-01-31 14:55:04,776: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:55:04,779: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:55:04,780: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:55:04,781: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-31 14:55:07,519: ERROR: main: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1738320907&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczODMyMDkwN319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=V7lc-9Nr3wYswbDUU~cK9MFf7Ts8kOfxKwt0CmB7seVlkS3AKjw7mrEAK7HXPtMsJvI~JzUTpjL2q-m8Smrqe~-ECiAoneP4OajOQiCg3DddOs2qf8Qsofw7~TCrq1FqtNIm8tpit5uUmRV-DeoEWTniTAMklvVWS-vAVAhojuqtlE~dxAQ1ECAMk5FHYO0w9nudIfatffnK-w~f4asGSXwqxKNMCv4C2r01I4HhRSoCzNO1eSC5~7bItA3qKsZlYO5c04KHVlxP2o5IzJYSlOtKQhJgKGl3ZCMJ5u7Krhkpzhjo712mEVOd2XhfD5t6HBEA69-H4gKTJfqpfHgfog__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)')))"), '(Request ID: 473af186-d93e-4b50-a8ad-9d23a8890f6a)')]
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\util\ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\util\ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\ssl.py", line 512, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\ssl.py", line 1070, in _create
+    self.do_handshake()
+  File "C:\D\MLOps\TextSummarizer\venv\lib\ssl.py", line 1341, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1738320907&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczODMyMDkwN319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=V7lc-9Nr3wYswbDUU~cK9MFf7Ts8kOfxKwt0CmB7seVlkS3AKjw7mrEAK7HXPtMsJvI~JzUTpjL2q-m8Smrqe~-ECiAoneP4OajOQiCg3DddOs2qf8Qsofw7~TCrq1FqtNIm8tpit5uUmRV-DeoEWTniTAMklvVWS-vAVAhojuqtlE~dxAQ1ECAMk5FHYO0w9nudIfatffnK-w~f4asGSXwqxKNMCv4C2r01I4HhRSoCzNO1eSC5~7bItA3qKsZlYO5c04KHVlxP2o5IzJYSlOtKQhJgKGl3ZCMJ5u7Krhkpzhjo712mEVOd2XhfD5t6HBEA69-H4gKTJfqpfHgfog__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 16, in train
+    model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(self.config.model_ckpt).to(device)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\transformers\modeling_utils.py", line 3805, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\transformers\utils\hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 860, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 1009, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 1543, in _download_to_tmp_and_move
+    http_get(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 369, in http_get
+    r = _request_wrapper(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 301, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1738320907&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczODMyMDkwN319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=V7lc-9Nr3wYswbDUU~cK9MFf7Ts8kOfxKwt0CmB7seVlkS3AKjw7mrEAK7HXPtMsJvI~JzUTpjL2q-m8Smrqe~-ECiAoneP4OajOQiCg3DddOs2qf8Qsofw7~TCrq1FqtNIm8tpit5uUmRV-DeoEWTniTAMklvVWS-vAVAhojuqtlE~dxAQ1ECAMk5FHYO0w9nudIfatffnK-w~f4asGSXwqxKNMCv4C2r01I4HhRSoCzNO1eSC5~7bItA3qKsZlYO5c04KHVlxP2o5IzJYSlOtKQhJgKGl3ZCMJ5u7Krhkpzhjo712mEVOd2XhfD5t6HBEA69-H4gKTJfqpfHgfog__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)')))"), '(Request ID: 473af186-d93e-4b50-a8ad-9d23a8890f6a)')
+[2025-01-31 14:58:01,809: INFO: config: PyTorch version 2.5.1 available.]
+[2025-01-31 14:58:03,017: INFO: main: stage Data Ingestion stage initiated]
+[2025-01-31 14:58:03,023: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:58:03,026: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:58:03,027: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:58:03,028: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-01-31 14:58:03,028: INFO: data_ingestion: File already exists]
+[2025-01-31 14:58:03,234: INFO: main: Stage Data Ingestion stage Completed]
+[2025-01-31 14:58:03,234: INFO: main: stage Data Transforamtion stage initiated]
+[2025-01-31 14:58:03,239: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:58:03,242: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:58:03,243: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:58:03,243: INFO: common: Created directory at: artifacts/data_transformation]
+[2025-01-31 14:58:05,950: INFO: main: Stage Data Transforamtion stage Completed]
+[2025-01-31 14:58:05,951: INFO: main: stage Data Trainer stage initiated]
+[2025-01-31 14:58:05,956: INFO: common: yaml file: config\config.yaml has been loaded successfully]
+[2025-01-31 14:58:05,961: INFO: common: yaml file: params.yaml has been loaded successfully]
+[2025-01-31 14:58:05,963: INFO: common: Created directory at: artifacts]
+[2025-01-31 14:58:05,966: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-31 14:58:08,829: ERROR: main: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1738321088&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczODMyMTA4OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=qCgN56F9zSkyyDMPVFlmtlG7F1ktTa2dD5kWkbTJFdOm1dvRqy098z1S0rPtGODa5U69HjWRzZY6lGCkalAzLp6XEF8iQRbHwCy-uH4Bq9zdArxSwWR8eqJbXn1BK9vBTBvbQ2h2FrKsxSSRqSxPkPKP6X552t8eXwUAkeLkaVgauy4MmPu14NMp7wiKn4OUgR-K8gFFnBsIoDVihKyZj5vNejsVCweUzpfcfWLzEb2DlXt438cqXsXFUDBd0lFaxHhXfT2nBrk0BdhIJm9lwHrplq1HnQeu5Mi-lG6S~80UE1LX3mHTDFM84TWSsvUugav-UuTUq~BYKoZX9M~bXQ__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)')))"), '(Request ID: 1462a0ed-d8cc-4712-96a7-ce432f33a88e)')]
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\util\ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\util\ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\ssl.py", line 512, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\ssl.py", line 1070, in _create
+    self.do_handshake()
+  File "C:\D\MLOps\TextSummarizer\venv\lib\ssl.py", line 1341, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1738321088&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczODMyMTA4OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=qCgN56F9zSkyyDMPVFlmtlG7F1ktTa2dD5kWkbTJFdOm1dvRqy098z1S0rPtGODa5U69HjWRzZY6lGCkalAzLp6XEF8iQRbHwCy-uH4Bq9zdArxSwWR8eqJbXn1BK9vBTBvbQ2h2FrKsxSSRqSxPkPKP6X552t8eXwUAkeLkaVgauy4MmPu14NMp7wiKn4OUgR-K8gFFnBsIoDVihKyZj5vNejsVCweUzpfcfWLzEb2DlXt438cqXsXFUDBd0lFaxHhXfT2nBrk0BdhIJm9lwHrplq1HnQeu5Mi-lG6S~80UE1LX3mHTDFM84TWSsvUugav-UuTUq~BYKoZX9M~bXQ__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\D\MLOps\TextSummarizer\main.py", line 35, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\D\MLOps\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 16, in train
+    model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(self.config.model_ckpt).to(device)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\transformers\modeling_utils.py", line 3805, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\transformers\utils\hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 860, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 1009, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 1543, in _download_to_tmp_and_move
+    http_get(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 369, in http_get
+    r = _request_wrapper(
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\file_download.py", line 301, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\D\MLOps\TextSummarizer\venv\lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1738321088&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczODMyMTA4OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=qCgN56F9zSkyyDMPVFlmtlG7F1ktTa2dD5kWkbTJFdOm1dvRqy098z1S0rPtGODa5U69HjWRzZY6lGCkalAzLp6XEF8iQRbHwCy-uH4Bq9zdArxSwWR8eqJbXn1BK9vBTBvbQ2h2FrKsxSSRqSxPkPKP6X552t8eXwUAkeLkaVgauy4MmPu14NMp7wiKn4OUgR-K8gFFnBsIoDVihKyZj5vNejsVCweUzpfcfWLzEb2DlXt438cqXsXFUDBd0lFaxHhXfT2nBrk0BdhIJm9lwHrplq1HnQeu5Mi-lG6S~80UE1LX3mHTDFM84TWSsvUugav-UuTUq~BYKoZX9M~bXQ__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)')))"), '(Request ID: 1462a0ed-d8cc-4712-96a7-ce432f33a88e)')
